@@ -6,6 +6,8 @@ using System.Diagnostics;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 using RabbitMQ.Client.Events;
+using Microsoft.Extensions.Hosting;
+using System.IO;
 
 
 namespace BrokerConsumer
@@ -18,26 +20,22 @@ namespace BrokerConsumer
         {
             _factory = new ConnectionFactory() { Uri = new Uri("amqps://bzjfwhny:o8wJbjylS7cGo9YmyeqO4qAiVUqeby8A@rat.rmq2.cloudamqp.com/bzjfwhny") };
         }
-        public async void Recieve()
+        public ConnectionFactory GetFactory()
         {
-            using var connection = await _factory.CreateConnectionAsync();
-            using var channel = await connection.CreateChannelAsync();
-
-            await channel.QueueDeclareAsync(queue: "users", durable: false, exclusive: false, autoDelete: false,
-                arguments: null);
-
+            return _factory;
+        }
+        public async void Recieve(IConnection connection, IChannel channel)
+        {
             Console.WriteLine("Waiting for messages.");
-            string info = "";
             var consumer = new AsyncEventingBasicConsumer(channel);
             consumer.ReceivedAsync += (model, ea) =>
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
-                info += message;
-                Console.WriteLine($" [x] Received {message}");
+                Console.WriteLine($"Received {message}");
+                File.AppendAllTextAsync(_path, $"{message}\n");
                 return Task.CompletedTask;
             };
-            await File.AppendAllTextAsync( _path, info );
             await channel.BasicConsumeAsync("users", autoAck: true, consumer: consumer);
         }
     }

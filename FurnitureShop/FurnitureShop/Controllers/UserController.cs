@@ -12,9 +12,11 @@ namespace FurnitureShop.Controllers
     {
         UserDB _userDB = new UserDB();
         ILogger<UserController> _logger;
-        public UserController(ILogger<UserController> logger)
+        IRabbitMQService _rabbitMQService;
+        public UserController(ILogger<UserController> logger, IRabbitMQService rabbitMQ)
         {
             _logger = logger;
+            _rabbitMQService = rabbitMQ;
         }
         [HttpPost]
         public IActionResult Login(string login, string password)
@@ -25,6 +27,7 @@ namespace FurnitureShop.Controllers
             else 
             {
                 _logger.LogInformation($"[Info --> UserController] В систему вошёл пользователь {login}");
+                _rabbitMQService.SendMessage($"{DateTime.Now} User with e-mail {login} has signed in");
                 return Ok(token.token); 
             }
         }
@@ -35,6 +38,7 @@ namespace FurnitureShop.Controllers
             Contracts.Token? token = _userDB.Register(name, login, password);
             if (token == null) { return Ok("Пользователь с таким логином уже существует"); }
             _logger.LogInformation($"[Info --> UserController] В системе был зарегистрирован пользователь {login}");
+            _rabbitMQService.SendMessage($"{DateTime.Now} User with e-mail {login} has been registered");
             return Ok(token.token);
         }
         [HttpGet]

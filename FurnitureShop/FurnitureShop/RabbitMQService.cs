@@ -1,5 +1,6 @@
 ﻿using RabbitMQ.Client;
 using System.Text;
+using System.Text.Json;
 
 namespace FurnitureShop
 {
@@ -16,7 +17,7 @@ namespace FurnitureShop
             using var channel = await connection.CreateChannelAsync();
             await channel.QueueDeclareAsync(queue: "users", durable: false, exclusive: false, autoDelete: false, arguments: null);
             var body = Encoding.UTF8.GetBytes(message);
-            await channel.BasicPublishAsync(exchange: string.Empty, routingKey: "hello", body: body);
+            await channel.BasicPublishAsync(exchange: "myExchange", routingKey: "users", body: body);
         }
     }
 }

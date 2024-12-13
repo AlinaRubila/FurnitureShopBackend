@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|c:\\users\\angry\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\furnitureshopbackend\\furnitureshop\\furnitureshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|solutionrelative:furnitureshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|c:\\users\\angry\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\furnitureshopbackend\\furnitureshop\\furnitureshop\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|solutionrelative:furnitureshop\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|c:\\users\\angry\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\furnitureshopbackend\\furnitureshop\\furnitureshop\\viewitemsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|solutionrelative:furnitureshop\\viewitemsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|c:\\users\\angry\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\furnitureshopbackend\\furnitureshop\\furnitureshop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|solutionrelative:furnitureshop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|c:\\users\\angry\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\furnitureshopbackend\\furnitureshop\\furnitureshop\\controllers\\viewitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|solutionrelative:furnitureshop\\controllers\\viewitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|c:\\users\\angry\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\furnitureshopbackend\\furnitureshop\\furnitureshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE8512F2-5EF7-4A2F-86B2-5A641763BDD6}|FurnitureShop\\FurnitureShop.csproj|solutionrelative:furnitureshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\Program.cs",
-              "RelativeDocumentMoniker": "FurnitureShop\\Program.cs",
-              "ToolTip": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\Program.cs",
-              "RelativeToolTip": "FurnitureShop\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T12:43:50.068Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -48,39 +31,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "FurnitureShop\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\Controllers\\UserController.cs",
+              "RelativeToolTip": "FurnitureShop\\Controllers\\UserController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAAB0AAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:06:57.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\Program.cs",
+              "RelativeDocumentMoniker": "FurnitureShop\\Program.cs",
+              "ToolTip": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\Program.cs",
+              "RelativeToolTip": "FurnitureShop\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T12:43:50.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "RabbitMQService.cs",
               "DocumentMoniker": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\RabbitMQService.cs",
               "RelativeDocumentMoniker": "FurnitureShop\\RabbitMQService.cs",
               "ToolTip": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\RabbitMQService.cs",
               "RelativeToolTip": "FurnitureShop\\RabbitMQService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAAzAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAkwBQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T11:37:19.996Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ViewItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\Controllers\\ViewItemsController.cs",
-              "RelativeDocumentMoniker": "FurnitureShop\\Controllers\\ViewItemsController.cs",
-              "ToolTip": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\Controllers\\ViewItemsController.cs",
-              "RelativeToolTip": "FurnitureShop\\Controllers\\ViewItemsController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAABewEkAAABmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T15:01:47.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViewItemsDB.cs",
-              "DocumentMoniker": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\ViewItemsDB.cs",
-              "RelativeDocumentMoniker": "FurnitureShop\\ViewItemsDB.cs",
-              "ToolTip": "C:\\Users\\angry\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043A\u0443\u0440\u0441\u0430\u0447\\FurnitureShopBackend\\FurnitureShop\\FurnitureShop\\ViewItemsDB.cs",
-              "RelativeToolTip": "FurnitureShop\\ViewItemsDB.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAA+wGEAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:07:57.913Z"
             }
           ]
         }
