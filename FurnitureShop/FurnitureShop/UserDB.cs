@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace FurnitureShop
 {
@@ -12,6 +13,8 @@ namespace FurnitureShop
         Model.ApplicationContext _database = new Model.ApplicationContext();
         static string HashPassword(string password)
         {
+            //////return Encoding.UTF8.GetString(SHA256.HashData(Encoding.UTF8.GetBytes(password)));
+
             byte[] salt;
             byte[] buffer2;
             using (Rfc2898DeriveBytes bytes = new Rfc2898DeriveBytes(password, 0x10, 0x3e8))
@@ -99,24 +102,19 @@ namespace FurnitureShop
         public Contracts.UserInfo GetUserInfo(int id)
         {
             User? user = _database.Users.Include(user => user.Role).FirstOrDefault(u => u.ID == id) ?? new User();
-            Contracts.UserInfo info = new Contracts.UserInfo();
-            Contracts.UserRole role = new Contracts.UserRole();
-            role.ID = user.Role.ID; role.name = user.Role.Name;
-            info.name = user.Name; info.role = role;
+            Contracts.UserInfo info = new Contracts.UserInfo 
+            { 
+                Name = user.Name, Role = new Contracts.UserRole { ID = user.Role.ID, Name = user.Role.Name}
+            };
             return info;
         }
         public List<Contracts.UserInfo> GetAllUsers()
         {
             var users = _database.Users.Include(user => user.Role).ToList();
-            List<Contracts.UserInfo> infos = new List<Contracts.UserInfo>();
-            foreach (var user in users)
+            List<Contracts.UserInfo> infos = users.Select(user => new Contracts.UserInfo
             {
-                Contracts.UserInfo info = new Contracts.UserInfo();
-                Contracts.UserRole role = new Contracts.UserRole();
-                role.ID = user.Role.ID; role.name = user.Role.Name;
-                info.name = user.Name; info.role = role;
-                infos.Add(info);
-            }
+                Name = user.Name, Role = new Contracts.UserRole { ID = user.Role.ID, Name = user.Role.Name}
+            }).ToList();
             return infos;
         }
     }

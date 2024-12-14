@@ -16,21 +16,22 @@ namespace FurnitureShop.Controllers
         }
         
         [HttpGet]
-        public IActionResult ShowAll()
+        public ActionResult<Contracts.Item[]> ShowAll()
         {
-            List<Contracts.Item> items = _viewItemsDB.ShowAll();
+            var items = _viewItemsDB.ShowAll().ToArray();
             _logger.LogInformation("[Info --> ViewItemsController] Пользователь запросил список товаров из БД");
-            return Ok(items.ToArray());
+
+            return Ok(items);
         }
         [HttpGet]
-        public IActionResult ShowCategories()
+        public ActionResult<Contracts.FurnitureCat[]> ShowCategories()
         {
             List<Contracts.FurnitureCat> categories = _viewItemsDB.ShowCategories();
             _logger.LogInformation("[Info --> ViewItemsController] Пользователь запросил список категорий из БД");
             return Ok(categories.ToArray());
         }
         [HttpGet]
-        public IActionResult ShowByCategory(int catid)
+        public ActionResult<Contracts.Item[]> ShowByCategory(int catid)
         {
             List<Contracts.Item>? items = _viewItemsDB.ShowByCategory(catid);
             if (items == null) { return Ok("Такой категории не существует!"); }
@@ -38,14 +39,14 @@ namespace FurnitureShop.Controllers
             return Ok(items.ToArray());
         }
         [HttpGet]
-        public IActionResult ShowInStock()
+        public ActionResult<Contracts.Item[]> ShowInStock()
         {
             List<Contracts.Item> items = _viewItemsDB.ShowInStock();
             _logger.LogInformation("[Info --> ViewItemsController] Пользователь запросил список товаров в наличии из БД");
             return Ok(items.ToArray());
         }
         [HttpGet]
-        public IActionResult ShowItem(int itemid)
+        public ActionResult<Contracts.Item> ShowItem(int itemid)
         {
             Contracts.Item? item = _viewItemsDB.ShowOne(itemid);
             if (item == null) { return Ok("Товара с таким id не существует"); }
@@ -61,13 +62,9 @@ namespace FurnitureShop.Controllers
             else { return Ok("Предмет не помещается в комнате"); }
         }
         [HttpPut]
-        [Authorize(AuthenticationSchemes = "Access", Roles = "Admin")]
-        public IActionResult AddNewItem(string name, double price, double length, double width, double height, int catid)
+        [Authorize(AuthenticationSchemes = "Access", Roles = "Admin, Employer")]
+        public ActionResult AddNewItem(Contracts.Item item)
         {
-            Contracts.Item item = new Contracts.Item();
-            item.ID = 0; item.name = name; item.price = price; item.length = length; item.width = width; item.height = height;
-            Contracts.FurnitureCat cat = new Contracts.FurnitureCat();
-            cat.ID = catid; cat.name = ""; item.category = cat;
             bool result = _viewItemsDB.AddNewItem(item);
             if (result == false) 
             {
@@ -78,7 +75,7 @@ namespace FurnitureShop.Controllers
             return Ok("Новый предмет добавлен");
         }
         [HttpPost]
-        [Authorize(AuthenticationSchemes = "Access", Roles = "Admin")]
+        [Authorize(AuthenticationSchemes = "Access", Roles = "Admin, Employer")]
         public IActionResult ChangeCount(int itemid, int newcount)
         {
             if (newcount < 0) { return Ok("Значение количества не должно быть отрицательным!"); }

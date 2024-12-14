@@ -43,7 +43,7 @@ namespace FurnitureShop.Controllers
         }
         [HttpGet]
         [Authorize(AuthenticationSchemes = "Access")]
-        public IActionResult GetInfo()
+        public ActionResult<Contracts.UserInfo> GetInfo()
         {
             var s = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
             int userid = 0;
@@ -53,7 +53,7 @@ namespace FurnitureShop.Controllers
         }
         [HttpGet]
         [Authorize(AuthenticationSchemes = "Access", Roles = "Admin")]
-        public IActionResult GetAllUsers()
+        public ActionResult<Contracts.UserInfo[]> GetAllUsers()
         {
             List<Contracts.UserInfo> users = _userDB.GetAllUsers();
             _logger.LogInformation("[Info --> UserController] Была получена информация о пользователях в системе");

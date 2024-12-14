@@ -28,13 +28,12 @@ namespace BrokerConsumer
         {
             Console.WriteLine("Waiting for messages.");
             var consumer = new AsyncEventingBasicConsumer(channel);
-            consumer.ReceivedAsync += (model, ea) =>
+            consumer.ReceivedAsync += async (model, ea) =>
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
                 Console.WriteLine($"Received {message}");
-                File.AppendAllTextAsync(_path, $"{message}\n");
-                return Task.CompletedTask;
+                await File.AppendAllTextAsync(_path, $"{message}\n");
             };
             await channel.BasicConsumeAsync("users", autoAck: true, consumer: consumer);
         }

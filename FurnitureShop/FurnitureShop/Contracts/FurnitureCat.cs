@@ -2,7 +2,7 @@
 {
     public class FurnitureCat
     {
-        public int ID;
-        public string name = "";
+        public required int ID { get; init; }
+        public required string Name { get; init; }
     }
 }

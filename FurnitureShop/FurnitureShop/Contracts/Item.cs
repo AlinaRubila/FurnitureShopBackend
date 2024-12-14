@@ -2,12 +2,12 @@
 {
     public class Item
     {
-        public int ID;
-        public string name = "";
-        public double price;
-        public double length;
-        public double width;
-        public double height;
-        public FurnitureCat category = new FurnitureCat();
+        public required int ID { get; init; }
+        public required string Name { get; init; }
+        public required double Price { get; init; }
+        public required double Length { get; init; }
+        public required double Width { get; init; }
+        public required double Height { get; init; }
+        public required FurnitureCat Category { get; init; }
     }
 }

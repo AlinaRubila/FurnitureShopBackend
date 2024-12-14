@@ -2,7 +2,7 @@
 {
     public class UserInfo
     {
-        public string name = "";
-        public UserRole role = new UserRole();
+        public required string Name { get; init; } = "";
+        public required UserRole Role { get; init; } = new UserRole();
     }
 }

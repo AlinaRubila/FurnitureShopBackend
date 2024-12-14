@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage;
 using System.Security.Claims;
 
 namespace FurnitureShop.Controllers
@@ -16,7 +17,7 @@ namespace FurnitureShop.Controllers
         }
         [HttpGet]
         [Authorize(AuthenticationSchemes = "Access")]
-        public IActionResult ViewCart()
+        public ActionResult<int[]> ViewCart()
         {
             var s = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
             int userid = 0;

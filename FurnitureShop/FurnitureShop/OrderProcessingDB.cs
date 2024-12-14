@@ -5,19 +5,23 @@ namespace FurnitureShop
     public class OrderProcessingDB
     {
         Model.ApplicationContext _database = new Model.ApplicationContext();
+        public int[] ReturnItems(Model.Order order)
+        {
+            List<int> items = new List<int>();
+            foreach (var item in order.Items) { items.Add(item.ID); }
+            return items.ToArray();
+        }
         public List<Contracts.Order> OrdersList(int userid)
         {
             var d_orders = _database.Orders.Include(o => o.User).Include(o => o.Items).Where(o => o.User.ID == userid).ToList();
-            List<Contracts.Order> orders = new List<Contracts.Order>();
-            foreach (var d_order in d_orders)
+            List<Contracts.Order> orders = d_orders.Select(order => new Contracts.Order
             {
-                List<int> items = new List<int>();
-                foreach (var item in d_order.Items) { items.Add(item.ID); }
-                Contracts.Order order = new Contracts.Order();
-                order.Id = d_order.ID; order.userid = d_order.User.ID; order.items = items;
-                order.creationDate = d_order.CreationDate; order.deliveryDate = d_order.DeliveryDate;
-                orders.Add(order);
-            }
+                ID = order.ID,
+                UserID = order.User.ID,
+                CreationDate = order.CreationDate,
+                DeliveryDate = order.DeliveryDate,
+                Items = ReturnItems(order).ToList()
+            }).ToList();
             return orders;
         }
         public bool CancelItem(int orderid, int itemid)

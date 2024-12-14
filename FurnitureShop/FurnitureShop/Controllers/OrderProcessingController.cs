@@ -16,7 +16,7 @@ namespace FurnitureShop.Controllers
         }
         [HttpGet]
         [Authorize(AuthenticationSchemes = "Access")]
-        public IActionResult ViewOrders()
+        public ActionResult<Contracts.Order[]> ViewOrders()
         {
             var s = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
             int userid = 0;

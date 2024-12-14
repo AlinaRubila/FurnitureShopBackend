@@ -2,7 +2,7 @@
 {
     public class UserRole
     {
-        public int ID;
-        public string name = "";
+        public int ID { get; init; }
+        public string Name { get; init; } = "";
     }
 }
